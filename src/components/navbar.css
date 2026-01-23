@@ -1,0 +1,101 @@
+/* Navbar principal */
+.navbar {
+  padding: 1rem 2rem;
+  background: linear-gradient(90deg, hsl(0, 0%, 0%), #00cfcc); /* degradado moderno */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* sombra sutil */
+  position: sticky; /* navbar fija al hacer scroll */
+  top: 0;
+  z-index: 1000;
+  transition: top 0.3s ease-in-out, background 0.3s, box-shadow 0.3s; /* transición suave al ocultar y mostrar */
+}
+
+/* Clase para ocultar navbar al bajar */
+.navbar.hide {
+  top: -100px; /* oculta completamente el navbar (ajusta según altura) */
+}
+
+/* Marca / nombre de la navbar */
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.7rem;
+  color: #ffffff !important;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Logo dentro de la navbar */
+.logo-navbar {
+  height: 55px;
+  width: auto;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+/* Hover del logo: crece ligeramente */
+.logo-navbar:hover {
+  transform: scale(1.1);
+}
+
+/* Animación de giro */
+.logo-navbar.spin {
+  animation: girar 0.6s ease;
+}
+
+/* Definición de la animación de giro */
+@keyframes girar {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.2);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+/* Links a la derecha */
+.navbar-nav .nav-link {
+  margin-left: 1.5rem;
+  font-weight: 500;
+  color: #ffffff;
+  transition: color 0.3s, transform 0.2s;
+  position: relative;
+}
+
+.navbar-nav .nav-link::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0;
+  background: #000000;
+  transition: width 0.3s;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #000000 !important;
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
+
+/* Botón del toggler (menú en móvil) */
+.navbar-toggler {
+  border-color: #ffffff;
+  transition: transform 0.3s;
+}
+
+.navbar-toggler:hover {
+  transform: rotate(90deg);
+}
+
+/* Opcional: efecto de scroll para cambiar navbar */
+.navbar.scrolled {
+  background: #004d40;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
