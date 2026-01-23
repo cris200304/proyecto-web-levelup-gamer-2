@@ -1,3 +1,4 @@
+
 /* Contenedor principal del carrito */
 .carrito-container {
   display: flex;
@@ -126,3 +127,133 @@ footer {
     gap: 15px;
   }
 }
+=======
+/* Contenedor principal del carrito */
+.carrito-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px;
+  min-height: 300px;
+}
+
+/* Cada producto dentro del carrito */
+.producto-carrito {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  padding: 20px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.producto-carrito:hover {
+  transform: translateY(-5px);
+}
+
+/* Imagen del producto */
+.producto-carrito img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain; /* ajusta tamaño sin distorsionar */
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+/* Título y precio */
+.producto-carrito h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.producto-carrito p {
+  font-size: 0.95rem;
+  margin: 5px 0;
+  color: #555;
+}
+
+.carrito-cantidad {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Botón eliminar */
+.btn-eliminar {
+  background-color: #ff4c4c;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.btn-eliminar:hover {
+  background-color: #e03a3a;
+}
+
+/* Contenedor de total y pagar */
+.pagar-container {
+  width: 100%;
+  max-width: 450px;
+  margin: 30px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Total de la compra */
+.total-compra {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Botón de pagar */
+.btn-pagar {
+  background-color: #4add00;
+  color: white;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-pagar:hover:not(:disabled) {
+  background-color: #047600;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 25px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .carrito-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pagar-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+

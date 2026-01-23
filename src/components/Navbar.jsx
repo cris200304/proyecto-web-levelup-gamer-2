@@ -19,7 +19,6 @@ export default function Navbar() {
     };
 
     window.addEventListener('scroll', handleScroll);
-
     return () => window.removeEventListener('scroll', handleScroll);
   }, [lastScrollY]);
 
@@ -32,7 +31,7 @@ export default function Navbar() {
       logo.classList.add('spin');
       setTimeout(() => {
         logo.classList.remove('spin');
-      }, 600); // duración igual que la animación CSS
+      }, 600);
     };
 
     logo.addEventListener('click', handleClick);
@@ -44,9 +43,9 @@ export default function Navbar() {
       <div className="container">
         {/* Logo + Nombre */}
         <NavLink to="/" className="navbar-brand d-flex align-items-center">
-          <img 
-            src="Categoria_IMG/Logo_web/Logo.png" 
-            alt="logo_Ingreso" 
+          <img
+            src="Categoria_IMG/Logo_web/Logo.png"
+            alt="logo"
             className="logo-navbar"
           />
           <span className="ms-2">Level-up Games</span>
@@ -65,7 +64,7 @@ export default function Navbar() {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        {/* Links a la derecha */}
+        {/* Links */}
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">

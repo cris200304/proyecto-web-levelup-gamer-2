@@ -1,3 +1,4 @@
+
 /* --- Carrusel de Información --- */
 .carruselInformacion {
   margin: 40px auto;
@@ -442,3 +443,449 @@
 .btn-carrito:hover {
   background-color: #007612;
 }
+=======
+/* --- Carrusel de Información --- */
+.carruselInformacion {
+  margin: 40px auto;
+  max-width: 1200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.carruselInformacion .carousel {
+  position: relative;
+}
+
+.carruselInformacion .carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carruselInformacion .carousel-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.carruselInformacion .carousel_info {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.carruselInformacion .carousel-content {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(255, 255, 255, 0.6);
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  max-width: 90%;
+}
+
+.carruselInformacion .carousel-content .btn-carrito {
+  display: inline-block;
+  margin-top: 10px;
+  background: #ff4d4d;
+  color: white;
+  padding: 8px 12px;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.carruselInformacion .carousel-content .btn-carrito:hover {
+  background: #e60000;
+}
+
+/* --- Botones de navegación (opcional) --- */
+.carruselInformacion .carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 18px;
+  z-index: 10;
+}
+
+.carruselInformacion .carousel-btn.prev {
+  left: 10px;
+}
+
+.carruselInformacion .carousel-btn.next {
+  right: 10px;
+}
+
+.carruselInformacion .carousel-btn:hover {
+  background: rgba(0,0,0,0.8);
+}
+
+/* --- Responsivo --- */
+@media (max-width: 768px) {
+  .carruselInformacion .carousel-content {
+    bottom: 10px;
+    left: 10px;
+    padding: 10px;
+    font-size: 14px;
+  }
+  
+  .carruselInformacion .carousel-content .btn-carrito {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+}
+
+/* --- FUTUROS EVENTOS --- */
+.futuros-eventos {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #e2f6ff, hwb(181 0% 38%));
+}
+
+.futuros-eventos h3 {
+  text-align: center;
+  font-size: 2rem;
+  color: #000000;
+  margin-bottom: 25px;
+  font-weight: bold;
+}
+
+.filtro-ciudad {
+  display: block;
+  margin: 0 auto 40px;
+  padding: 12px 15px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #19bf00;
+  background-color: #ffffff;
+  color: #000000;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.filtro-ciudad:hover {
+  background-color: #1eca0b;
+}
+
+/* GRID DE EVENTOS */
+.eventos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto 40px;
+}
+
+/* CARD DE EVENTO */
+.evento-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+}
+
+.evento-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.evento-card h4 {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  color: #05b136;
+}
+
+.evento-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* BOTÓN MAPA */
+.btn-mapa {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: hsl(121, 100%, 39%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn-mapa:hover {
+  background: #028f2e;
+  transform: scale(1.05);
+}
+
+/* CONTENEDOR DE MAPA */
+.map-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 40px auto 0 auto;
+  border-radius: 15px;
+  overflow: hidden;
+  height: 400px; /* altura fija para que se vea */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* ANIMACIÓN DE APARICIÓN */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.evento-card {
+  animation: fadeUp 0.6s ease;
+}
+
+/* --- CARRUSEL VENTAS --- */
+.carruselVentas {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 50px auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+}
+
+.carousel {
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.carousel-slide img.carousel-image {
+  max-width: 40%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.carousel-content {
+  max-width: 50%;
+}
+
+.game-title {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.descripcion {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.game-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #111;
+}
+
+.cart-buttons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.quantity-controls button {
+  padding: 5px 10px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.btn-carrito {
+  background-color: #50c700;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn-carrito:hover {
+  background-color: #00e508;
+}
+
+.success-message {
+  margin-top: 10px;
+  color: green;
+  font-weight: bold;
+}
+
+/* --- BOTONES DE NAVEGACIÓN --- */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+  transition: background-color 0.3s;
+}
+
+.carousel-btn:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+  .carousel-slide {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .carousel-slide img.carousel-image {
+    max-width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .carousel-content {
+    max-width: 100%;
+  }
+}
+
+/* --- LO MÁS VENDIDO --- */
+.lomasVendido {
+  padding: 40px 20px;
+  background-color: #f8f8f8;
+  text-align: center;
+}
+
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.producto {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s;
+}
+
+.producto:hover {
+  transform: translateY(-5px);
+}
+
+.producto img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  background-color: #f0f0f0;
+}
+
+.producto h3 {
+  font-size: 1.2rem;
+  margin: 10px 0 5px 0;
+}
+
+.producto .descripcion {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.producto .precio {
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.quantity-controls button {
+  padding: 5px 12px;
+  border: none;
+  background-color: #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.quantity-controls button:hover {
+  background-color: #ccc;
+}
+
+.btn-carrito {
+  padding: 8px 16px;
+  border: none;
+  background-color: #2ca600;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-carrito:hover {
+  background-color: #007612;
+}
+
